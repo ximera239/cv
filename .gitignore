@@ -1,0 +1,45 @@
+# generic
+*.class
+*.log
+*.bak
+*.tap
+logs
+tmp
+*.swp
+*.sublime-workspace
+*.sublime-project
+.fuse_hidden*
+backup
+
+# sbt specific
+target
+target/
+.target
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+project/project
+project/target
+test.sbt
+
+# intellij specific
+.bsp
+.idea
+.idea_modules
+platform.iml
+*.iml
+
+# project specific
+
+# play specific
+RUNNING_PID
+conf/generated.keystore
+
+# MacOS specific
+.DS_Store
+
+# scala worksheets
+*.sc
+.worksheet/
+/bin
