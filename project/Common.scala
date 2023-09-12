@@ -3,6 +3,12 @@ import sbt._
 
 object Common {
   object Dependencies {
+    val akkaVersion = "2.6.21"
+    val akkaStream = "com.typesafe.akka" %% "akka-stream" % akkaVersion
+    val akkaActor = "com.typesafe.akka" %% "akka-actor" % akkaVersion
+
+    val akkaTestkit = "com.typesafe.akka" %% "akka-testkit" % akkaVersion % Test
+
     val specs2Core = "org.specs2" %% "specs2-core" % "4.20.2" % Test
     val specs2Mock = "org.specs2" %% "specs2-mock" % "4.20.2" % Test
 

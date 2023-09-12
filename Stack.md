@@ -118,7 +118,7 @@ def empty[T: NumericEvidence]: Stack[T] = implicitly[NumericEvidence[T]].getEvid
 ```
 
 
-Full version can be found [here](https://github.com/ximera239/cv/blob/main/modules/cormen/src/main/scala/com/zhoga/cv/problems/Stack.scala)
+Full version can be found [here](https://github.com/ximera239/cv/blob/main/modules/core/src/main/scala/com/zhoga/cv/problems/Stack.scala)
 
 -----------------
 
