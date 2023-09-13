@@ -1,14 +1,16 @@
 ## Overview
 
+This repo is an addon for my [linkedin](https://www.linkedin.com/in/evgenyzhoga/) profile
+
+**<span style="color:darkgreen">Work in progress...</span>**
+
+---
+
 I've read a lot of professional articles and books during my life. Here, I wish to keep some references to books that I've read (maybe, with some implementations). 
 
 I'll also leave here some examples of problems that were challenging and important to answer at the time I was asked to look into it.
 
-And another type of problems, some tricky challenges that I found interesting, perhaps complex, or that taught me anything 
-
-
-**<span style="color:darkgreen">Work in progress...</span>**
-
+And another type of problems, some tricky challenges that I found interesting, perhaps complex, or that taught me anything
 
 ### Interesting problems
 
