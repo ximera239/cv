@@ -1,11 +1,13 @@
 ## Overview
 
-During my life I read quite some professional books and papers. I will not be able to recall even the names for the most of them.
-During my carrier I solved some number of challenging problems, and when you are asked about that it can be hard to recall.
-Here I want to keep some links to books that I read (with some implementations), I will leave here some examples of problems which were difficult and important to solve at the time I got them, or problems which I found interesting, maybe tricky or taught me something. 
+I've read a lot of professional articles and books during my life. Here, I wish to keep some references to books that I've read (maybe, with some implementations). 
+
+I'll also leave here some examples of problems that were challenging and important to answer at the time I was asked to look into it.
+
+And another type of problems, some tricky challenges that I found interesting, perhaps complex, or that taught me anything 
 
 
-**<span style="color:darkblue">Work in progress...</span>**
+**<span style="color:darkgreen">Work in progress...</span>**
 
 
 ### Interesting problems
@@ -18,15 +20,35 @@ Once upon a time I saw a [question](https://ru.stackoverflow.com/q/1278314/41704
 
 Story and link to solution can be found [here](Stack.md)
 
+---
+
 - [ReactiveMongo](https://github.com/ReactiveMongo/ReactiveMongo) mongo driver issue with concurrent usage of channels
 
-Long story in short - we used ReactiveMongo driver in our application. We had a problem from time to time that requests which usually work fast count take much more time than usual (seconds/tens of seconds). This "from time to time" was random, so I spent some time debugging and tracing, and eventually found, that driver uses chnnals open to mongodb as if they are fully asynchronous (multiple requests are replied by multiple responses in any order, as soon as it ready). But instead it worked as FIFO.. Which meant that if fast request was sent to the same channel, which was used just before for slow request, then this fast request execution time will be extended with execution time of slow request.
+Long story in short - we used ReactiveMongo driver in our application. We had a problem from time to time that requests which usually work fast could take much more time than usual (seconds/tens of seconds instead of milliseconds). This "from time to time" was random, so I spent some time debugging and tracing, and eventually found, that driver uses channels open to mongodb as if they are fully asynchronous (multiple requests are replied by multiple responses in any order, as soon as they are ready). But instead channels worked as FIFO.. Which meant that if fast request was sent to the same channel, which was used just before for slow request, then this fast request execution time will be extended to execution time of slow request.
 
-Issue was solved by maintainer [here](https://github.com/ReactiveMongo/ReactiveMongo/pull/762) (I commented PR from my work github account [eugeneatnezasa](https://github.com/eugeneatnezasa))
+Issue was reported to maintainer and was solved by him [here](https://github.com/ReactiveMongo/ReactiveMongo/pull/762) (I commented PR from my work github account [eugeneatnezasa](https://github.com/eugeneatnezasa))
 
-- I spent much time working with akkastreams. Some utilities and purposes can be found [here](AkkaStreams.md)
+---
+
+- I spent much time working with akkastreams. Some utilities and their purposes can be found [here](AkkaStreams.md)
+
+---
 
 - 
+
+### Videos
+
+- [ZIO from Scratch](https://www.youtube.com/playlist?list=PLvdARMfvom9B21CNSdn88ldDKCWKZ8Kfx)
+
+(hmm, there are much more videos... when I watched it, there were only 5 parts in the playlist)
+
+- [Category Theory](https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_) by Bartosz Milewski
+
+Super long and requires to watch very carefully and sometimes rewind and re-watch.. There are still 5 videos to complete.
+
+But it made me buy the book [Category Theory For Programmers](https://github.com/hmemcpy/milewski-ctfp-pdf) which is waiting on the shelf
+
+---
 
 ### Books
 
@@ -38,6 +60,9 @@ Some examples:
 
 1. [Sorting](https://github.com/ximera239/cv/blob/main/modules/cormen/src/main/scala/com/zhoga/cv/cormen/Sorting.scala)
 
-2. 
 
-- 
+---
+
+- [Functional Programming for Mortals](https://leanpub.com/fpmortals) - I bought version for Cats. It is available in my library at leanpub, but not available for sale. Sources can be found [here](https://github.com/sadhu89/fpmortals-cats)
+
+Nice book. Some chapters were unclear at first, and then I met situations where I can use this. **todo example**  
