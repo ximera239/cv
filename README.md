@@ -50,6 +50,10 @@ Super long and requires to watch very carefully and sometimes rewind and re-watc
 
 But it made me buy the book [Category Theory For Programmers](https://github.com/hmemcpy/milewski-ctfp-pdf) which is waiting on the shelf
 
+- [Let's reboot DDD](https://vimeo.com/167722768) by Thomas Pierrain and Jeremie Grodziski
+
+Heard before the term DDD, but did not check the theory (books or videos) about the specific of the approach. Recently, I decided to find any opinions which book is better to read to understand approach specific, and, occasionally, found this video. Which increased my interest a lot, because approach looks like a theoretical basis for what I have been trying to follow (based on experience and knowledge I have) for the last 6-7 years.       
+
 ---
 
 ### Books
