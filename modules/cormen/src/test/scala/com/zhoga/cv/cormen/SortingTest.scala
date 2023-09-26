@@ -1,6 +1,5 @@
 package com.zhoga.cv.cormen
 
-import org.specs2.matcher.MustMatchers
 import org.specs2.mutable.Specification
 
 class SortingTest extends Specification {

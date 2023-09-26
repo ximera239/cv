@@ -9,6 +9,8 @@ object Common {
 
     val akkaTestkit = "com.typesafe.akka" %% "akka-testkit" % akkaVersion % Test
 
+    val catsCore = "org.typelevel" %% "cats-core" % "2.10.0"
+
     val specs2Core = "org.specs2" %% "specs2-core" % "4.20.2" % Test
     val specs2Mock = "org.specs2" %% "specs2-mock" % "4.20.2" % Test
 
@@ -28,8 +30,8 @@ object Common {
     scalaVersion := "2.13.11",
     scalacOptions ++= Seq(
     ),
-    javaOptions += "-Duser.language=en",
-    javaOptions += "-Duser.country=US",
+//    javaOptions += "-Duser.language=en",
+//    javaOptions += "-Duser.country=US",
   ) ++ scalafmtSettings
 
   val settings: Seq[Setting[_]] = baseSettings

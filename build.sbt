@@ -4,6 +4,12 @@ Global / cancelable := false
 
 lazy val core = (project in file("modules/core"))
   .settings(Common.settings)
+  .settings(
+    libraryDependencies ++= Seq(
+      Common.Dependencies.catsCore,
+    ),
+    libraryDependencies ++= Common.Dependencies.testing,
+  )
 
 lazy val cormen = (project in file("modules/cormen"))
   .settings(Common.settings)
