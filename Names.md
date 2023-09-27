@@ -77,3 +77,26 @@ Now we can implement independent tail-recursive processor. Implementation is [he
 But, actually, you can notice, that all our sub-streams are independent, so, we can write another processor with futures and do some work in parallel. [Here](https://github.com/ximera239/cv/blob/main/modules/core/src/main/scala/com/zhoga/cv/problems/names/NamesApproach3.scala#L96) you can find implementation.
 
 Another improvement is how we read the data. `Source` does convertions to chars (which we then convert back to bytes). We can avoid this and read the file directly, [which](https://github.com/ximera239/cv/blob/main/modules/core/src/main/scala/com/zhoga/cv/problems/names/Utils.scala#L72C1) also improves performance
+
+## Run it
+
+Each approach implementation can be run:
+
+```sbt
+// run simple solution (approach 1)
+> run --file "<your file here>" --run simple
+// recursive (approach 2)
+> run --file "<your file here>" --run recursive
+// solution with trampoline (sync)
+> run --file "<your file here>" --run trampoline
+// solution with trampoline (sync) with improved source (read bytes, not chars)
+> run --file "<your file here>" --run trampoline-fs
+// async solution
+> run --file "<your file here>" --run async
+// async solution with improved source (read bytes, not chars)
+> run --file "<your file here>" --run async-fs
+// run all above one by another
+> run --file "<your file here>" --run all
+```
+
+TODO: Improved implementations work faster on huge files (e.g. ~500mb), but they spend too much time in GC. I need to implement good iterator builder, which will not create new structures every iteration. I think this will improve performance even more. 
